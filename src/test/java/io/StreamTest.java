@@ -7,6 +7,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
+import java.nio.channels.ByteChannel;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -42,8 +43,9 @@ public class StreamTest {
         bb.put (testread);
         bb.flip ();
         CharBuffer cb = cs.decode (bb);
-
+        bb.clear();
         char[] chars = cb.array();
+
 
         System.out.println(String.valueOf(chars));  //可以看到虽然取出是6个字节，但是由于最后一个字节是'\0'，所以只能4个字节的有效信息
 
