@@ -4,7 +4,7 @@ import java.nio.ByteBuffer;
 
 /**
  * Created by WujaeSebas on 2018/8/29.
- * FUNCTION: TODO
+ * FUNCTION: NIO Byte Buffer 测试
  */
 public class ByteBufferMethods {
     public static void main(String args[]){
